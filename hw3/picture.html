@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="hw3.css">
+    <title>Picture</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <a href="index.html" data-toggle="tooltip" data-placement="right" title="回首頁">前端程式設計</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <!-- <img src="img/p1.png" alt=""> -->
+            <div class="content">
+                <h1>範例3 - 圖片樣式練習</h1>
+            </div>
+        </div>
+        <div class="test">
+            <img src="img/p4.jpg" alt="燈塔" style="
+    width: 400px;
+    border-width: 3px;
+    border-color: blue;
+    border-style: dashed;
+    border-radius: 50%;
+    ">
+            <hr>
+            <p>background-size：contain - 以寬度為主，不夠大的會複製貼上</p>
+            <div style="
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 50%;
+    background-image: url(img/p4.jpg);
+    "></div>
+            <p>background-size：cover - 以高度為主，不夠大的會複製貼上</p>
+            <div style="
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 50%;
+    background-image: url(img/p4.jpg);
+    "></div>
+            <hr>
+            <img src="img/p4.jpg" alt="燈塔"> 這段字會和img同行
+            <div class="center">這裡要上下要有點空白</div>
+            <div id="img2"></div>
+            <hr>
+            <h1>邊框練習</h1>
+            <img class="border" src="img/p4.jpg" alt="燈塔">
+            <div class="center border">這裡要上下要有點空白</div>
+            <div id="img2" class="img-center"></div>
+        </div>
+    </div>
+</body>
+
+</html>
