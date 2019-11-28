@@ -1,4 +1,5 @@
 # 前端程式設計 HW4 - 個人履歷網站
+
 ### 網站內容簡介
 - About Me (我的基本資料、自我介紹)
 - Why Choose Me (我的個人特質、技能介紹)
@@ -10,10 +11,9 @@
 - Contact Me
 
 ### 小亮點
-1. 網站的fav icon 
-![大耳狗 fav icon](/img/cin1.jpg)
-
-2. 
+1. 網站的 favicon ![大耳狗 favicon](/img/favicon.jpg '網站 favicon')
+2. 標籤頁的網站名稱
+3. 
 
 ### 模板資訊
 Theme Name: Rapid
