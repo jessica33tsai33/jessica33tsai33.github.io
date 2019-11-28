@@ -12,12 +12,18 @@
 
 ### 小亮點
 1. 網站的 favicon
+<pre><code><img src='/img/favicon.jpg'></img>
+</code></pre>
 
-    ![大耳狗 favicon](/img/favicon.jpg '網站 favicon')
 2. 標籤頁的網站名稱
+<pre><code>Jessica Tsai's Resume</img>
+</code></pre>
 
-    Jessica Tsai's Resume
-3. 
+3. 第一次跑出網站時，連續往下滾動，每個區塊的標題會淡入，每個區塊的內容則會依序跳上來
+4. 滑鼠只到照片、特定內容上內容會浮動變大
+5. Extracurricular Activities部分內容的小標題有連結
+6. My Portfolio 每個作品集有兩種icon，眼睛icon可以放大圖片，連結icon可以連到線上的作品介紹
+7. My Portfolio 下的作品集有分類，可以依照分類查看不同的作品
 
 ### 模板資訊
 Theme Name: Rapid
