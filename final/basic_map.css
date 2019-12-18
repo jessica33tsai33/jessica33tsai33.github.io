@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+    background-color: #eee;
+}
+
+span {
+    font-size: 12px;
+    color: gray;
+}
+
+#page-header > span:nth-child(2){
+    font-size: 15px;
+    color: black;
+}
+
+hr {
+    border-style: solid;
+    border-color: #da8cac;
+    /*border-top-color: #da8cac;*/
+    border-width: 1.5px;
+}
+
+p>#addVar{
+    margin-left: 0px;
+}
+
+
+
+#map {
+    width: 80%;
+    height: 450px;
+    margin: 20px auto;
+    background: grey;
+}
+
+#panel {
+    width: 80%;
+    margin: 20px auto;
+    height: 400px;
+}
+
+#page-header {
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 0px;
+    padding: 5px;
+    background-color: #fbd9db;
+    /*border-radius: 15px;*/
+    text-align: center;
+}
+
+#intro{
+    text-align: left;
+}
+
+#intro > h3:nth-child(4){
+    margin-top: 3px;
+}
+
+ol{
+    margin-block-start:0.2rem;
+    padding-inline-start:30px;
+}
+
+#container {
+    width: 98%;
+    margin: 10px auto;
+    padding: 5px;
+    /*background-color: #eee;*/
+    /*border-radius: 15px;*/
+}
+
+/*新增按鈕*/
+#addVar {
+    margin: 0 0 0 52px;
+    padding: 5px;
+    display: inline-block;
+    background-color: #3A9668;
+    color: #f1f1f1;
+    border: 1px solid #005;
+    border-radius: 4px;
+}
+#addVar1 {
+    margin: 0 0 0 0px;
+    padding: 5px;
+    display: inline-block;
+    background-color: #3A9668;
+    color: #f1f1f1;
+    border: 1px solid #005;
+    border-radius: 4px;
+}
+
+/*刪除按鈕*/
+.removeVar {
+    margin: auto;
+    padding: 5px;
+    display: inline-block;
+    background-color: #B02109;
+    color: #f1f1f1;
+    border: 1px solid #005;
+    border-radius: 4px;
+}
+
+#addVar:hover,
+#addVar1:hover,
+.removeVar:hover {
+    cursor: pointer;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+input,
+textarea {
+    padding: 5px;
+    font-size: 16px;
+}
+
+footer{
+    text-align: center;
+    color: gray;
+}

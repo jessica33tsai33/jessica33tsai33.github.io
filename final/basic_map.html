@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>SequenceRouting | Access Time Frame</title>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="template.css" />
+    <link rel="stylesheet" type="text/css" href="basic_map.css" />
+    <script type="text/javascript" src='test-credentials.js'></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <!-- <script type="text/javascript" src='../js-examples-rendering-helpers/iframe-height.js'></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body id="geocode">
+    <div id="page-header">
+        <h1>前端程式設計期末專題 - Waypoints Sequence 多旅次路徑規劃</h1>
+        <span>生工四 B05602001 蔡采佳</span>
+        <hr>
+        <div id="intro">
+            <h3 style="display: inline;">網站簡介：</h3><p style="display: inline;">本網站提供使用者輸入出發地點、出發時間、途經的地點、希望何時抵達以及預計停留時間，經過計算後將提供符合使用者需求的路線規劃以及抵達時間。</p><br><br>
+            <h3 style="display: inline;">操作方法：</h3><p style="display: inline;">輸入出發點、出發時間、旅次點、旅次時間窗格，點擊 <input type="button" value="Show Sequence"> 進行路徑規劃，點擊 <input type="button" value="Routing On Map"> 將路線畫到地圖上。
+            點擊 <span id="addVar1">新增一項</span> 即可新增一項旅次點，點擊 <span class="removeVar">刪除</span> 刪除旅次點。</p>
+            <br><br>
+            <h3 style="display: inline;">提醒：</h3>
+            <ol>
+              <li>地圖提供縮放功能、比例尺、且可用滑鼠點擊托移。</li>
+              <li>本網頁使用之路徑規劃功能，採用HereAPI，連結帳戶為 Tsai-Chia Tsai 個人帳戶，一天限用10次。</li>
+            </ol>
+        </div>
+    </div>
+    <div id="container">
+        <form id="myForm" method="post">
+            <p>
+                出發 0： <input type="text" value="中央百世大廈;25.0218182,121.5415404" Id="Origin">
+                出發時間：<input type="text" value="2019-08-19T08:00:00" Id="OriginTime">
+            </p>
+            <p>
+                <label for="waypoint1">旅次 1： </label>
+                <input type="text" value="美麗華摩天輪;25.0832597,121.5575253" name="waypoint1" id="waypoint1">
+                時間範圍：<input type="text" value="09:00:00" name="waypointStartTime1" Id="waypointStartTime1">
+                -&nbsp;<input type="text" value="10:00:00" name="waypointEndTime1" Id="waypointEndTime1">
+                停留時間：<input type="text" value="1200" name="waypointDuration1" Id="waypointDuration1">
+                <span class="removeVar">刪除</span>
+            </p>
+            <p>
+                <label for="waypoint2">旅次 2： </label>
+                <input type="text" value="圓山大飯店;25.0786063,121.526246" name="waypoint2" id="waypoint2">
+                時間範圍：<input type="text" value="10:30:00" name="waypointStartTime2" Id="waypointStartTime2">
+                -&nbsp;<input type="text" value="11:00:00" name="waypointEndTime2" Id="waypointEndTime2">
+                停留時間：<input type="text" value="600" name="waypointDuration2" Id="waypointDuration2">
+                <span class="removeVar">刪除</span>
+            </p>
+            <p><span id="addVar">新增一項</span></p>
+            <p class="alignRight"><input type="button" value="Show Sequence" onclick="processFormData()">
+                <input type="button" value="Routing on Map" onclick="RoutingOnMapButton()"></p>
+        </form>
+    </div>
+    <div id="map"></div>
+    <div id="panel"></div>
+    <div id="panel1"></div>
+    <footer>
+        copyright&copy;JessicaTsai@ntu 2019
+    </footer>
+    <script type="text/javascript" src='basic_map.js'></script>
+</body>
+
+</html>
