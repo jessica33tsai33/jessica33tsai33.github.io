@@ -132,20 +132,13 @@ function addWaypointsMapMarker(waypoints) {
         var waypointslat = waypoints[i].mappedPosition.latitude;
         var waypointslng = waypoints[i].mappedPosition.longitude;
         // Add a marker to the waypoints group
-        var waypointsMarker;
-        var Icon = new H.map.Icon('img/driver.png');
-
+        var waypointsMarker = new H.map.Marker({
+            lat: waypointslat,
+            lng: waypointslng
+        }, { icon: truckIcons[i] });
         if (i == 0) {
-            waypointsMarker = new H.map.Marker({
-                lat: waypointslat,
-                lng: waypointslng
-            }, { icon: Icon });
             waypointsMarker.waypointinfo = window.Origin;
         } else {
-            waypointsMarker = new H.map.Marker({
-                lat: waypointslat,
-                lng: waypointslng
-            }, { icon: truckIcons[i] });
             waypointsMarker.waypointinfo = window.waypointinfo[i - 1][0];
         }
 
