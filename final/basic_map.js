@@ -101,9 +101,9 @@ function onSuccess(result) {
     addWaypointsMapMarker(route.waypoint);
     addRouteShapeToMap(route);
     addManueversToMap(route);
-    addWaypointsToPanel(route.waypoint);
-    addManueversToPanel(route);
     addSummaryToPanel(route.summary);
+    addManueversToPanel(route);
+
 }
 
 function onError(error) {
@@ -223,24 +223,6 @@ function addManueversToMap(route) {
     map.addObject(group);
 }
 
-//每個停留點 waypoints 顯示在Panel上
-function addWaypointsToPanel(waypoints) {
-
-    var nodeH3 = document.createElement('h3'),
-        waypointLabels = [],
-        i;
-
-
-    for (i = 0; i < waypoints.length; i += 1) {
-        waypointLabels.push(waypoints[i].label)
-    }
-
-    nodeH3.textContent = waypointLabels.join(' - ');
-
-    //routeInstructionsContainer.innerHTML = '';
-    routeInstructionsContainer.appendChild(nodeH3);
-}
-
 //路徑規劃的總里程、預估旅行時間顯示在Panel上
 function addSummaryToPanel(summary) {
     var summaryDiv = document.createElement('div'),
@@ -340,7 +322,7 @@ function processFormData() {
     }
 
 
-    alert(alert_string)
+    alert(alert_string);
     HEREwaypointSequenceTimeFrameAPI();
 }
 
@@ -363,33 +345,8 @@ function HEREwaypointSequenceTimeFrameAPI() {
 
     sequenceRequest.onload = function() {
         window.waypointSequence = sequenceRequest.response;
-        showSequence(window.waypointSequence);
+        sequenceToRouting(window.waypointSequence);
     }
-}
-
-//Here waypoints sequence API 傳回之json檔，反序列化，顯示出旅次順序
-function showSequence(jsonObj) {
-    var sequenceID = document.createElement('div'),
-        content = '';
-    content += "旅次順序與預計抵達時間：" + '<br/>';
-    content += "第0點(出發點)：" + jsonObj['results'][0]['waypoints'][0]['id'] + "，預計出發時間：" + jsonObj['results'][0]['waypoints'][0]['estimatedDeparture'] + '<br/>';
-    for (j = 1; j <= varCount; j++) {
-        content += "第" + (j - 1) + "點-第" + j + "點，" + jsonObj['results'][0]['waypoints'][j - 1]['id'] + " - " + jsonObj['results'][0]['waypoints'][j]['id'] + "，距離：" + jsonObj['results'][0]["interconnections"][j - 1]["distance"] + "公尺，行駛所需時間：" + jsonObj['results'][0]["interconnections"][j - 1]["time"] + '秒<br/>';
-        content += "第" + j + "點：" + jsonObj['results'][0]['waypoints'][j]['id'] + "，預計停留時間：" + jsonObj['results'][0]['waypoints'][j]['estimatedArrival'] + " - " + jsonObj['results'][0]['waypoints'][j]['estimatedDeparture'] + '<br/>';
-    }
-
-    sequenceID.style.fontSize = 'small';
-    sequenceID.style.marginLeft = '5%';
-    sequenceID.style.marginRight = '5%';
-    sequenceID.innerHTML = content;
-
-    routeInstructionsContainer.appendChild(sequenceID);
-}
-
-
-//將here API jsonObj，反序列化找出經緯度，使用calculateRouteFromAtoB畫圖在map、顯示資訊在panel上
-function RoutingOnMapButton() {
-    sequenceToRouting(window.waypointSequence);
 }
 
 function sequenceToRouting(jsonObj) {
@@ -401,4 +358,8 @@ function sequenceToRouting(jsonObj) {
     }
 
     calculateRouteFromAtoB(platform, sequences);
+}
+
+function clearMap() {
+    map.removeObjects(map.getObjects());
 }
