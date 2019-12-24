@@ -218,22 +218,22 @@ body {
 
 a {
     text-decoration: none;
-    color: #00afaa
+    color: #000
 }
 
 a:visited:hover,
 a:hover {
     text-decoration: none;
-    color: #00afaa
+    color: #000
 }
 
 a:active {
-    color: #48dad0
+    color: #000
 }
 
 a:visited {
     text-decoration: none;
-    color: #00afaa
+    color: #000
 }
 
 b,
