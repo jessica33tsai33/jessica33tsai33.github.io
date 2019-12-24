@@ -1,0 +1,15 @@
+https://wse.api.here.com/2/findsequence.json?departure=2015-05-04T8:00:00%2b01:00
+&mode=fastest;car;traffic:disabled
+&app_id=nmQ65BBkVAKB1HRTngrs
+&app_code=ak3Ww-jRbTHMXX-3WWNlPQ
+&start=いァκ稨;25.0218182,121.5415404
+&destination1=蛾逗┍;25.0786063,121.526246;
+acc:mo09:00:00%2b01:00%7cmo10:00:00%2b01:00;st:1200
+&destination2=腞地集ぱ近;25.0832597,121.5575253;
+acc:mo10:30:00%2b01:00%7cmo12:00:00%2b01:00;st:600
+&destination3=101;25.0334118,121.5649563;
+acc:mo08:00:00%2b01:00%7cmo09:00:00%2b01:00;st:600
+&destination4=籓地﹁刁カ;25.0386228,121.4983478;
+acc:mo08:00:00%2b01:00%7cmo12:00:00%2b01:00;st:600
+&end=いァκ加;25.0218182,121.5415404
+&improveFor=TIME
