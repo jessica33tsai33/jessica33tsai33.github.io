@@ -44,8 +44,6 @@
         </div>
     </div>
     <div id="container">
-        <div class="alignCenter">
-        </div>
         <form id="myForm" method="post">
             <p>
                 出發 0： <input type="text" value="中央百世大廈;25.0218182,121.5415404" Id="Origin">
@@ -67,7 +65,9 @@
                 停留時間：<input type="text" value="600" name="waypointDuration2" Id="waypointDuration2">
                 <span class="removeVar">刪除</span>
             </p>
-            <p><span id="addVar">新增一項</span><a href="https://www.google.com.tw/maps/preview?hl=zh-TW"><button>經緯度查詢</button></a></p>
+            <p><span id="addVar">新增一項</span>
+                <button><a href="https://www.google.com.tw/maps" target="_blank">經緯度查詢</a></button>
+            </p>
             <p class="alignCenter"><input type="button" value="Send Data" onclick="processFormData()"></p>
         </form>
     </div>
