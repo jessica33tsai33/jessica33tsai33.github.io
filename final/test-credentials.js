@@ -1,2 +1,2 @@
-var app_id = 'jwRY5momKQuYZaR29L6K';
-var app_code = 'bUNPiUZ95lUjYAWiHn2JV_nuSEs8qrS8r0KKZb8pNPA';
+var app_id = 'BHbSK4VvMNNgMelL82YN';
+var app_code = 'I1XXu9O_0b1FKgVc2C0k4w';
