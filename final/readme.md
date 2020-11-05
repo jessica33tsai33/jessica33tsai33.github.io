@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/2iVGNTuRTRCKkSOP3MWzFA/badge)](https://hackmd.io/2iVGNTuRTRCKkSOP3MWzFA)
 ## 期末個人專題 - 多旅次路徑規劃 (在時間限制之下)
 
 ### 專題主題簡介
@@ -24,3 +25,5 @@
 1. 地圖提供縮放功能、比例尺、且可用滑鼠點擊托移。
 2. 顯示在地圖上的規劃好的路徑點可用滑鼠點擊，會出現該地點的詳細資料。
 3. 能夠在過往的兩點規劃路徑中加入多個經過點，並且考慮停留時間以及希望抵達時間，做出最實用的路徑規劃工具。
+
+###### tags: `front-end programming` `Class` `javascript` `heremap api` `GitHub`
