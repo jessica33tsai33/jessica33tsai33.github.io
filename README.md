@@ -1,4 +1,8 @@
 # 前端程式設計 HW4 - 個人履歷網站
+
+[![hackmd-github-sync-badge](https://hackmd.io/tKBrJr2VTHCwAuN0ls33-Q/badge)](https://hackmd.io/tKBrJr2VTHCwAuN0ls33-Q)
+
+108/12
 >我是蔡采佳 Jessica Tsai，目前是台灣大學生物環境系統工程學系四年級的學生，因為對程式語言很有興趣，加上這學期修了一堂「前端程式設計」課程，其中之一的作業讓我完成了這份線上履歷，若有任何問題，網站內有聯絡資訊，歡迎聯絡我，謝謝！
 
 網站連結：https://jessica33tsai33.github.io/
@@ -196,3 +200,5 @@ Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-templ
 Author: BootstrapMade.com
 
 Author URL: https://bootstrapmade.com
+
+###### tags: `front-end programming` `Class` `GitHub` `javascript` `bootstrap`
